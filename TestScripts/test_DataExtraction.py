@@ -45,7 +45,16 @@ def Sales_Data_From_Linux_Server():
         print(f"An error occurred: {e}")
 
 
+@pytest.fixture()
+def ExecutionFlow():
+    logger.info("before Test Steps in execution ...")
+    yield
+    logger.info("after Test Steps in execution ...")
+
+
+
 @pytest.mark.Linux_souces
+@pytest.mark.skip
 def test_extraction_from_sales_data_CSV_to_sales_staging_MySQL(Sales_Data_From_Linux_Server):
     logger.info(" Data extraction from sales_data.csv to sales_staging has started .......")
     try:
@@ -55,28 +64,28 @@ def test_extraction_from_sales_data_CSV_to_sales_staging_MySQL(Sales_Data_From_L
         logger.error(f"Error occured during data extraction: {e}")
         pytest.fail(f"Test failed due to an error {e}")
 
-@pytest.mark.skip
-def test_extraction_from_product_data_CSV_to_product_staging_MySQL():
+@pytest.mark.smoke
+def test_extraction_from_product_data_CSV_to_product_staging_MySQL(ExecutionFlow):
     logger.info(" Data extraction from product_data.csv to product_staging has started .......")
     try:
-        file_to_db_verify('Testdata/product_data.csv','csv','staging_product',mysql_engine)
+        file_to_db_verify('D:\OctTestAutomationFraneworkTestReports\product_data.csv','csv','staging_product',mysql_engine)
         logger.info(" Data extraction from product_data.csv to product_staging has completed .......")
     except Exception as e:
         logger.error(f"Error occured during data extraction: {e}")
         pytest.fail(f"Test failed due to an error {e}")
 
 @pytest.mark.regression
-def test_extraction_from_supplier_data_JSON_to_supplier_staging_MySQL():
+def test_extraction_from_supplier_data_JSON_to_supplier_staging_MySQL(ExecutionFlow):
     logger.info(" Data extraction from supplier_data.json to supplier_staging has started .......")
     try:
-        file_to_db_verify('Testdata/supplier_data.json','json','staging_supplier',mysql_engine)
+        file_to_db_verify('D:\OctTestAutomationFraneworkTestReports\supplier_data.json','json','staging_supplier',mysql_engine)
         logger.info(" Data extraction from supplier_data.json to supplier_staging has completed .......")
     except Exception as e:
         logger.error(f"Error occured during data extraction: {e}")
         pytest.fail(f"Test failed due to an error {e}")
 
 @pytest.mark.regression
-def test_extraction_from_inventory_data_XML_to_supplier_staging_MySQL():
+def test_extraction_from_inventory_data_XML_to_supplier_staging_MySQL(ExecutionFlow):
     logger.info(" Data extraction from inventory_data.xml to inventory_staging has started .......")
     try:
         file_to_db_verify('Testdata/inventory_data.xml','xml','staging_inventory',mysql_engine)
@@ -86,7 +95,7 @@ def test_extraction_from_inventory_data_XML_to_supplier_staging_MySQL():
         pytest.fail(f"Test failed due to an error {e}")
 
 @pytest.mark.regression
-def test_extraction_from_store_ORCL_to_store_staging_MySQL():
+def test_extraction_from_store_ORCL_to_store_staging_MySQL(ExecutionFlow):
     logger.info(" Data comparision between from store table from Oracle to store_staging has started .......")
     try:
         query1 = """select * from stores"""

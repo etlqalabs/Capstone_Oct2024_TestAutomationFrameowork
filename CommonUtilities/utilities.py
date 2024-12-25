@@ -6,6 +6,7 @@ from Config.config import *
 import pytest
 import logging
 
+
 # Create mysql engine
 mysql_engine = create_engine(f'mysql+pymysql://{MYSQL_USER}:{MYSQL_PASSWORD}@{MYSQL_HOST}:{MYSQL_PORT}/{MYSQL_DATABASE}')
 
@@ -37,6 +38,7 @@ def file_to_db_verify(file_path,file_type,table_name,db_engine):
     logger.info(f"actual data is :{df_actual}")
     #implement the logic to write the differential data between source and target
     assert df_actual.equals(df_expected),f"Data comparision failed to load in {table_name}"
+
 
 
 # verify data between two databases or 2 tables

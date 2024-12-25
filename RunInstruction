@@ -5,3 +5,6 @@ pytest .\TestScripts\ -v -s -m regression --log-file='Logs/testResults.log' --lo
 # To run all specific test file in TestScripts package/directory
 pytest .\TestScripts\test_DataTransfromation.py -v -s --log-file='Logs/testResults.log' --log-level=INFO
 
+# To externalize the HTML report , Logs etc
+# e.g. use "D:\OctTestAutomationFraneworkTestReports" for generating repprts and logs etc..
+pytest .\TestScripts\test_DataExtraction.py -v -s --log-file='D:\OctTestAutomationFraneworkTestReports\testResults.log' --log-level=INFO --html=D:\OctTestAutomationFraneworkTestReports\repprt.html

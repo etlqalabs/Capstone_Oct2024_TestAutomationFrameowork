@@ -1,4 +1,140 @@
-INFO     TestScripts.test_DataQuality:test_DataQuality.py:31 File availability check for Sales_data.csv has been initiated.. 
-INFO     TestScripts.test_DataQuality:test_DataQuality.py:33 File availability check for Sales_data.csv has been completed.. 
-INFO     TestScripts.test_DataQuality:test_DataQuality.py:43 File size check for Sales_data.csv has been initiated.. 
-INFO     TestScripts.test_DataQuality:test_DataQuality.py:45 File size check for Sales_data.csv has been completed.. 
+INFO     TestScripts.test_DataExtractionUsingClass:test_DataExtractionUsingClass.py:35 Data extraction from product_data.csv to product_staging has started .......
+INFO     CommonUtilities.utilities:utilities.py:35 expected data is :   product_id        product_name     category  price  stock_quantity    brand  rating
+0         101           iPhone 15  Smartphones    999              50    Apple     4.8
+1         102  Samsung Galaxy S23  Smartphones    899              75  Samsung     4.7
+2         103         Dell XPS 13      Laptops   1200              30     Dell     4.6
+3         104      MacBook Pro 14      Laptops   2000              25    Apple     4.9
+4         105     Sony WH-1000XM5   Headphones    350             100     Sony     4.7
+5         106       Nike Air Zoom     Sneakers    120             200     Nike     4.5
+6         107      Samsung 55" TV  Electronics    700              40  Samsung     4.4
+7         108    Philips Hue Bulb   Smart Home     50             500  Philips     4.8
+8         109     Fitbit Charge 5    Wearables    150             150   Fitbit     4.6
+9         110   Kindle Paperwhite     eReaders    130              80   Amazon     4.7
+INFO     CommonUtilities.utilities:utilities.py:38 actual data is :   product_id        product_name     category  price  stock_quantity    brand  rating
+0         101           iPhone 15  Smartphones    999              50    Apple     4.8
+1         102  Samsung Galaxy S23  Smartphones    899              75  Samsung     4.7
+2         103         Dell XPS 13      Laptops   1200              30     Dell     4.6
+3         104      MacBook Pro 14      Laptops   2000              25    Apple     4.9
+4         105     Sony WH-1000XM5   Headphones    350             100     Sony     4.7
+5         106       Nike Air Zoom     Sneakers    120             200     Nike     4.5
+6         107      Samsung 55" TV  Electronics    700              40  Samsung     4.4
+7         108    Philips Hue Bulb   Smart Home     50             500  Philips     4.8
+8         109     Fitbit Charge 5    Wearables    150             150   Fitbit     4.6
+9         110   Kindle Paperwhite     eReaders    130              80   Amazon     4.7
+INFO     TestScripts.test_DataExtractionUsingClass:test_DataExtractionUsingClass.py:38 Data extraction from product_data.csv to product_staging has completed .......
+INFO     TestScripts.test_DataExtractionUsingClass:test_DataExtractionUsingClass.py:46 Data extraction from supplier_data.json to supplier_staging has started .......
+INFO     CommonUtilities.utilities:utilities.py:35 expected data is :   supplier_id         supplier_name    contact_name  ...    country rating last_order_date
+0            1      ABC Distributors        John Doe  ...        USA    4.8      2024-11-20
+1            2     Global Goods Inc.      Jane Smith  ...     Canada    4.3      2024-11-19
+2            3   GreenTech Solutions  Robert Johnson  ...         UK    4.6      2024-11-18
+3            4              EuroWare     Emily White  ...    Germany    4.2      2024-11-22
+4            5      Pacific Products   Michael Brown  ...  Australia    4.7      2024-11-17
+5            6     Fresh Produce Co.    Sarah Taylor  ...     France    4.4      2024-11-21
+6            7  TechCore Electronics       David Lee  ...      Japan    4.9      2024-11-23
+7            8       HanYang Trading      Laura King  ...      China    4.1      2024-11-16
+8            9         Indo Supplies  James Williams  ...      India    4.3      2024-11-25
+9           10         LatAm Imports   Olivia Harris  ...     Mexico    4.5      2024-11-20
+
+[10 rows x 8 columns]
+INFO     CommonUtilities.utilities:utilities.py:38 actual data is :   supplier_id         supplier_name    contact_name  ...    country rating last_order_date
+0            1      ABC Distributors        John Doe  ...        USA    4.8      2024-11-20
+1            2     Global Goods Inc.      Jane Smith  ...     Canada    4.3      2024-11-19
+2            3   GreenTech Solutions  Robert Johnson  ...         UK    4.6      2024-11-18
+3            4              EuroWare     Emily White  ...    Germany    4.2      2024-11-22
+4            5      Pacific Products   Michael Brown  ...  Australia    4.7      2024-11-17
+5            6     Fresh Produce Co.    Sarah Taylor  ...     France    4.4      2024-11-21
+6            7  TechCore Electronics       David Lee  ...      Japan    4.9      2024-11-23
+7            8       HanYang Trading      Laura King  ...      China    4.1      2024-11-16
+8            9         Indo Supplies  James Williams  ...      India    4.3      2024-11-25
+9           10         LatAm Imports   Olivia Harris  ...     Mexico    4.5      2024-11-20
+
+[10 rows x 8 columns]
+INFO     TestScripts.test_DataExtractionUsingClass:test_DataExtractionUsingClass.py:49 Data extraction from supplier_data.json to supplier_staging has completed .......
+INFO     TestScripts.test_DataExtractionUsingClass:test_DataExtractionUsingClass.py:57 Data extraction from inventory_data.xml to inventory_staging has started .......
+INFO     CommonUtilities.utilities:utilities.py:35 expected data is :    product_id  store_id  quantity_on_hand last_updated
+0          101         1                50   2024-09-01
+1          102         1                30   2024-09-02
+2          103         2                40   2024-09-03
+3          106         3                25   2024-09-06
+4          107         1                35   2024-09-07
+5          108         2                45   2024-09-08
+6          109         3                55   2024-09-09
+7          110         3                65   2024-09-10
+8          101         4                50   2024-09-11
+9          102         4                40   2024-09-12
+10         103         5                30   2024-09-13
+11         104         5                20   2024-09-14
+12         105         6                50   2024-09-15
+13         106         6                60   2024-09-16
+14         107         7                30   2024-09-17
+15         108         7                40   2024-09-18
+16         109         8                45   2024-09-19
+17         110         8                55   2024-09-20
+18         101         9                65   2024-09-21
+19         102         9                75   2024-09-22
+20         103        10                80   2024-09-23
+21         104        10                90   2024-09-24
+22         106         2               110   2024-09-26
+23         107         3               120   2024-09-27
+24         108         4               130   2024-09-28
+25         109         5               140   2024-09-29
+26         110         6               150   2024-09-30
+27         101         7               160   2024-10-01
+28         102         8               170   2024-10-02
+29         103         9               180   2024-10-03
+INFO     CommonUtilities.utilities:utilities.py:38 actual data is :    product_id  store_id  quantity_on_hand last_updated
+0          101         1                50   2024-09-01
+1          102         1                30   2024-09-02
+2          103         2                40   2024-09-03
+3          106         3                25   2024-09-06
+4          107         1                35   2024-09-07
+5          108         2                45   2024-09-08
+6          109         3                55   2024-09-09
+7          110         3                65   2024-09-10
+8          101         4                50   2024-09-11
+9          102         4                40   2024-09-12
+10         103         5                30   2024-09-13
+11         104         5                20   2024-09-14
+12         105         6                50   2024-09-15
+13         106         6                60   2024-09-16
+14         107         7                30   2024-09-17
+15         108         7                40   2024-09-18
+16         109         8                45   2024-09-19
+17         110         8                55   2024-09-20
+18         101         9                65   2024-09-21
+19         102         9                75   2024-09-22
+20         103        10                80   2024-09-23
+21         104        10                90   2024-09-24
+22         106         2               110   2024-09-26
+23         107         3               120   2024-09-27
+24         108         4               130   2024-09-28
+25         109         5               140   2024-09-29
+26         110         6               150   2024-09-30
+27         101         7               160   2024-10-01
+28         102         8               170   2024-10-02
+29         103         9               180   2024-10-03
+INFO     TestScripts.test_DataExtractionUsingClass:test_DataExtractionUsingClass.py:60 Data extraction from inventory_data.xml to inventory_staging has completed .......
+INFO     TestScripts.test_DataExtractionUsingClass:test_DataExtractionUsingClass.py:68 Data comparison from store table from Oracle to store_staging has started .......
+INFO     CommonUtilities.utilities:utilities.py:47 expected data is :   store_id    store_name
+0         1       Walmart
+1         2        Target
+2         3      Best Buy
+3         4        Costco
+4         5    Home Depot
+5         6        Lowe's
+6         7   Apple Store
+7         8          IKEA
+8         9     Walgreens
+9        10  CVS Pharmacy
+INFO     CommonUtilities.utilities:utilities.py:49 actual data is :   store_id    store_name
+0         1       Walmart
+1         2        Target
+2         3      Best Buy
+3         4        Costco
+4         5    Home Depot
+5         6        Lowe's
+6         7   Apple Store
+7         8          IKEA
+8         9     Walgreens
+9        10  CVS Pharmacy
+INFO     TestScripts.test_DataExtractionUsingClass:test_DataExtractionUsingClass.py:73 Data comparison from store table from Oracle to store_staging has completed .......
